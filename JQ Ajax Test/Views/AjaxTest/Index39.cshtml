@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Index39";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section script
+    {
+    <script>
+        $(document).ready(function () {
+            $(".sub").click(function () {
+                var _name = $(".name").val();
+                var _family = $(".family").val();
+                $.post('Index39', { name: _name, family: _family }, function (i) {
+                    $(".result").text(i);
+                }/*,"json"*/);
+            });
+        });
+    </script>
+}
+<input type="text" class="name">
+<input type="text" class="family">
+<button class="sub">Test Ajax</button>
+<div class="result"></div>
+
+<style>
+    .result {
+        width: 100%;
+        height: 600px;
+        margin: 30px auto;
+        border: solid 1px #555;
+    }
+</style>
+

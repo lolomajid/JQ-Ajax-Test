@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            <ul>
+                <li>@Html.ActionLink("Index38", "Index38", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index39", "Index39", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index40", "Index40", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index41", "Index41", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index42", "Index42", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index43", "Index43", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index44", "Index44", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index45", "Index45", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index46", "Index46", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index47", "Index47", "AjaxTest")</li>
+                <li>@Html.ActionLink("Index48", "Index48", "AjaxTest")</li>
+            </ul>
+            <h1>@ViewData["Title"]</h1>
+            
+            @RenderBody()
+        </main>
+    </div>
+</body>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@RenderSection("script", false)
+
+</html>
+<style>
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+</style >

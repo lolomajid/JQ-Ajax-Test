@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Index41";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section script
+    {
+    <script>
+        $(document).ready(function () {
+            $(".email").focusout(function () {
+                var _email = $(this).val();
+                $.post("Index41", { email: _email }, function (i) {
+                    $(".result").html(i);
+                });
+            });
+        });
+    </script>
+}
+<input type="email" class="email">
+<span class="result"></span>
+
+<style>
+
+</style>
+
